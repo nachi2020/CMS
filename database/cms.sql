@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2020 at 11:05 PM
+-- Generation Time: May 09, 2020 at 11:38 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cities` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(10) NOT NULL
+  `name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -41,11 +41,11 @@ CREATE TABLE `cities` (
 
 CREATE TABLE `contacts` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `f_name` varchar(10) NOT NULL,
-  `l_name` varchar(10) NOT NULL,
-  `email` varchar(10) NOT NULL,
-  `user_id` int(3) NOT NULL,
-  `city_id` int(3) NOT NULL
+  `f_name` varchar(20) NOT NULL,
+  `l_name` varchar(20) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `user_id` int(30) NOT NULL,
+  `city_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -56,8 +56,8 @@ CREATE TABLE `contacts` (
 
 CREATE TABLE `contact_image` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `contact_id` int(3) NOT NULL,
-  `image` varchar(10) NOT NULL
+  `contact_id` int(30) NOT NULL,
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -68,8 +68,8 @@ CREATE TABLE `contact_image` (
 
 CREATE TABLE `email` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `contact_id` int(3) NOT NULL,
-  `email` varchar(10) NOT NULL
+  `contact_id` int(30) NOT NULL,
+  `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -91,7 +91,7 @@ CREATE TABLE `genders` (
 
 CREATE TABLE `phone_numbers` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `contact_id` int(3) NOT NULL,
+  `contact_id` int(30) NOT NULL,
   `phone_number` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -103,7 +103,7 @@ CREATE TABLE `phone_numbers` (
 
 CREATE TABLE `roles` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(10) NOT NULL
+  `name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -114,11 +114,11 @@ CREATE TABLE `roles` (
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `f_name` varchar(10) NOT NULL,
-  `l_name` varchar(10) NOT NULL,
-  `email` varchar(10) NOT NULL,
-  `password` varchar(10) NOT NULL,
-  `role_id` int(3) NOT NULL,
+  `f_name` varchar(20) NOT NULL,
+  `l_name` varchar(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `role_id` int(30) NOT NULL,
   `is_verified` tinyint(1) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `email_verified_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -133,10 +133,10 @@ CREATE TABLE `users` (
 
 CREATE TABLE `user_details` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` int(3) NOT NULL,
-  `gender_id` int(3) NOT NULL,
+  `user_id` int(30) NOT NULL,
+  `gender_id` int(30) NOT NULL,
   `dob` date NOT NULL,
-  `city_id` int(3) NOT NULL
+  `city_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -147,7 +147,7 @@ CREATE TABLE `user_details` (
 
 CREATE TABLE `user_phone_numbers` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `user_detail_id` int(3) NOT NULL,
+  `user_detail_id` int(30) NOT NULL,
   `phone_number` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -159,8 +159,8 @@ CREATE TABLE `user_phone_numbers` (
 
 CREATE TABLE `user_profile` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` int(3) NOT NULL,
-  `image` varchar(10) NOT NULL
+  `user_id` int(30) NOT NULL,
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
