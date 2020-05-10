@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2020 at 11:38 PM
+-- Generation Time: May 10, 2020 at 10:11 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.8
 
@@ -43,7 +43,6 @@ CREATE TABLE `contacts` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `f_name` varchar(20) NOT NULL,
   `l_name` varchar(20) NOT NULL,
-  `email` varchar(40) NOT NULL,
   `user_id` int(30) NOT NULL,
   `city_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -106,6 +105,14 @@ CREATE TABLE `roles` (
   `name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`) VALUES
+(1, 'Admin'),
+(2, 'User');
+
 -- --------------------------------------------------------
 
 --
@@ -119,9 +126,9 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(200) NOT NULL,
   `role_id` int(30) NOT NULL,
-  `is_verified` tinyint(1) NOT NULL,
-  `is_active` tinyint(1) NOT NULL,
-  `email_verified_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `is_verified` tinyint(1) NOT NULL DEFAULT '0',
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
+  `email_verified_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -277,7 +284,7 @@ ALTER TABLE `phone_numbers`
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
