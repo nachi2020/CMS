@@ -6,9 +6,19 @@
 </head>
 <body>
 <form action="adminDashboard.php">
-	<label>Email: <input type="Email" name="email"></label><br>
-	<label>Password: <input type="password" name="password"></label><br>
-	<input type="submit" name="login" value="Login"><br><br>
+	<div class="form-group">
+		<label>Email:</label>
+	<input type="text" name="email" class="form-control"><br>
+	</div>
+	
+	<div class="form-group">
+	<label>Password:</label>
+	<input type="PASSWORD" name="PASSWORD" class="form-control"><br>
+	</div>
+<div class="container">
+<button type="submit" class="btn btn-primary">Submit</button>	
+</div>
+
 
 </form>
 </body>

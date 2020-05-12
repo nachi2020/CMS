@@ -1,39 +1,26 @@
-	<?php
-session_start();
-	?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
-
-<table border="2px">
-
-	<tr>
-		<th>NAME</th>
-		<th>EMAIL</th>
-		<th>ROLE</th>
-	</tr>
-	<tr>
-		<td>nach</td>
-		<td>hi@gmail.com</td>
-		<td>admin</td>
-	</tr>
-	
-</table>
-
-<?php
-
-$_SESSION['email'] = "nachirashid@gmail.com";
-echo $_SESSION['email'];
-if(isset($_SESSION['email'])){
-echo "<br>You are logged in.";
-} else{
-	echo "You are not logged in";
-}
-
-?>
+<div class="container table-responsive">
+	<table class="table table-stripped" border="1px">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Email</td>
+				<td>role</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>nach</td>
+				<td>hey@yahoo.com</td>
+				<td>admin</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 </body>
 </html>
