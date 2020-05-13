@@ -11,13 +11,13 @@
   <body>
  <div class="container table-responsive">
   <table class="table table-stripped" border="1px">
-    <thead>
+   
       <tr>
-        <td>Name</td>
-        <td>Email</td>
-        <td>role</td>
+        <th>Name</th>
+        <th>Email</th>
+        <th>role</th>
       </tr>
-    </thead>
+    
     <tbody>
       <tr>
         <td>nach</td>
