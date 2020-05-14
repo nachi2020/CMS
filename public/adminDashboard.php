@@ -7,25 +7,37 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../resources/css/main.css">
   </head>
   <body>
- <div class="container table-responsive">
-  <table class="table table-stripped" border="1px">
-   
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>role</th>
-      </tr>
-    
-    <tbody>
-      <tr>
-        <td>nach</td>
-        <td>hey@yahoo.com</td>
-        <td>admin</td>
-      </tr>
-    </tbody>
-  </table>
+ <div class="container">
+  <div class="table-div" >
+    <table class="table table-stripped" border="1px">
+
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>role</th>
+        </tr>
+
+      <tbody>
+        <?php
+        include_once '../database/dbconnection.php';
+        $sql = "SELECT * from users";
+        $result = mysqli_query($conn,$sql);
+        while ($row = mysqli_fetch_array($result)) {
+          ?>
+          <tr>
+            <td><?php echo $row['f_name']." ".$row['l_name'];?></td>
+            <td><?php echo $row['email'];?></td>
+            <td><?php echo $row['role_id'];?></td>
+          </tr>
+          <?php
+        }
+        ?>
+      </tbody>
+    </table>
+  </div>
 </div>
 
     <!-- Optional JavaScript -->

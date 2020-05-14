@@ -7,25 +7,27 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../resources/css/main.css">
   </head>
   <body>
-  
-    <form action="adminDashboard.php">
-  <div class="form-group">
-    <label>Email:</label>
-  <input type="text" name="email" class="form-control"><br>
-  </div>
-  
-  <div class="form-group">
-  <label>Password:</label>
-  <input type="PASSWORD" name="PASSWORD" class="form-control"><br>
-  </div>
-<div class="container">
-<button type="submit" class="btn btn-primary">Submit</button> 
-</div>
 
+    <div class="col-md-4 offset-md-4 login" >
+      <form action="../app/loginAdmin.php" method="POST" autocomplete="off">
+        <center> <h1>Admin Login</h1> </center>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="text" name="email" class="form-control" autocomplete="off"><br>
+      </div>
 
-</form>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" name="password" class="form-control" autocomplete="off"><br>
+      </div>
+      <div class="container">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

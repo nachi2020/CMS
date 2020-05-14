@@ -1,0 +1,13 @@
+body{
+ background-color: #f0f0f0;
+}
+
+.login{
+	margin-top: 200px;
+	padding: 40px;
+	background-color: white;
+	border-radius: 20px;
+}
+.table-div{
+	margin-top: 100px;
+}
