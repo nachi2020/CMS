@@ -12,22 +12,19 @@
 
   </head>
   <body>
-  
-    <form action="../app/loginAdmin.php" class="col-md-4 offset-md-4 login" method="POST">
+  <div class="col-md-4 offset-md-4 login">
+    <form action="../app/loginAdmin.php"  method="POST" autocomplete="off">
       <center><h1>Admin Login</h1></center>
-<div class="container">
 
   <div class="form-group">
     <label>Email:</label>
-  <input type="text" name="email" class="form-control"><br>
+  <input type="text" name="email" class="form-control" autocomplete="off"><br>
   </div>
   
   <div class="form-group">
   <label>Password:</label>
-  <input type="PASSWORD" name="password" class="form-control"><br>
+  <input type="password" name="password" class="form-control" autocomplete="off"><br>
   </div>
-
-</div>
 
 <div class="container">
 <button type="submit" class="btn btn-primary">Submit</button> 
@@ -35,7 +32,7 @@
 
 
 </form>
-
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
