@@ -7,10 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../resources/main.css">
+
   </head>
   <body>
   
-    <form action="adminDashboard.php">
+    <form action="../app/loginAdmin.php" class="col-md-4 offset-md-4 login">
+      <center><h1>Admin Login</h1></center>
+<div class="container">
+
   <div class="form-group">
     <label>Email:</label>
   <input type="text" name="email" class="form-control"><br>
@@ -18,8 +24,11 @@
   
   <div class="form-group">
   <label>Password:</label>
-  <input type="PASSWORD" name="PASSWORD" class="form-control"><br>
+  <input type="PASSWORD" name="password" class="form-control"><br>
   </div>
+
+</div>
+
 <div class="container">
 <button type="submit" class="btn btn-primary">Submit</button> 
 </div>
