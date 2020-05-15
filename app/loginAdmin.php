@@ -1,15 +1,13 @@
 <?php
-include ("../database/dbconnection.php");
+include_once '../database/dbconnection.php';
 
-$Email = $_POST['email'];
-$Password = $_POST['password'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-$sql = "SELECT * FROM users where email = $Email AND password = SHA('$Password')";
+$sql = "SELECT * FROM users where email = $email AND password = SHA('$password')";
 $result = mysqli_query($conn, $sql);
 
-$row =  mysql_fetch_array($result);
-if ($row['email']==$Email && $row['password']==$Password) {
-	# code...
+if (mysqli_num_rows($result)==1) {
 
 header("location: ../public/adminDashboard.php");
 

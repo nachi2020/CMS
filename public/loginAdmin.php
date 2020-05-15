@@ -13,7 +13,7 @@
   </head>
   <body>
   
-    <form action="../app/loginAdmin.php" class="col-md-4 offset-md-4 login">
+    <form action="../app/loginAdmin.php" class="col-md-4 offset-md-4 login" method="POST">
       <center><h1>Admin Login</h1></center>
 <div class="container">
 
