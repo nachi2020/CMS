@@ -1,5 +1,4 @@
 <?php
-include_once '../database/dbconnection.php';
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -14,9 +13,8 @@ header("location: ../public/adminDashboard.php");
 }
 else{
 
-header("location: ../public/loginAccount.php");
+header("location: ../public/register.php");
 
 }
 
 ?>
-
