@@ -1,7 +1,6 @@
-
 <?php
 
-include "dbconnection.php";
+include_once '../database/dbconnection.php';
 
 $first = $_POST['firstname'];
 $last = $_POST['lastname'];

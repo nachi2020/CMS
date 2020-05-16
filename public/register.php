@@ -1,10 +1,5 @@
-
-<?php
-include_once '../database/createUser.php';
-?>
-
 <!DOCTYPE html>
-<html lang="en">>
+<html lang="en">
 <head>
 	<title></title>
 	  <!-- Required meta tags -->
@@ -17,7 +12,7 @@ include_once '../database/createUser.php';
 <body>
 
   <div class="col-md-4 offset-md-4 login">
-    <form action="register.php"  method="POST" autocomplete="off">
+    <form action="../app/register.php"  method="POST" autocomplete="off">
       <center><h1>REGISTER</h1></center>
 
   <div class="form-group">
@@ -34,14 +29,14 @@ include_once '../database/createUser.php';
     <label>Email:</label>
   <input type="text" name="email" class="form-control" autocomplete="off"><br>
   </div>
-  
+
   <div class="form-group">
   <label>Password:</label>
   <input type="password" name="password" class="form-control" autocomplete="off"><br>
   </div>
 
 <div class="container">
-<button type="submit" class="btn btn-primary">SIGN UP</button> 
+<button type="submit" class="btn btn-primary">SIGN UP</button>
 <p>Are you already a user? <a href="loginAccount.php">Login here</a></p>
 
 </div>
