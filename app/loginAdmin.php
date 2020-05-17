@@ -14,7 +14,7 @@ header("location: ../public/adminDashboard.php");
 }
 else{
 
-header("location: ../public/loginAccount.php");
+header("location: ../public/adminlogin.php");
 
 }
 

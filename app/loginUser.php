@@ -8,12 +8,12 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result)==1) {
 
-header("location: ../public/adminDashboard.php");
+header("location: ../public/userhome.php");
 
 }
 else{
 
-header("location: ../public/register.php");
+header("location: ../public/userlogin.php");
 
 }
 
