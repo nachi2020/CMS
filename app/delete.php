@@ -2,14 +2,10 @@
 
 include_once '../database/dbconnection.php';
 
-#user_id = $_POST['id'];
-#$first = $_POST['firstname'];
-#$last = $_POST['lastname'];
-#$mail = $_POST['email'];
-#$pwd = $_POST['password'];
-#$role = $_POST['role_id'];
+$user_id = $_GET['id'];
 
-$sql = "DELETE FROM users WHERE id=";
+
+$sql = "DELETE FROM users WHERE id=$user_id";
 $result = mysqli_query($conn,$sql);
 
 if ($result) {

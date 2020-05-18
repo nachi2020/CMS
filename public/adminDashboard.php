@@ -37,11 +37,11 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result)){
   ?>
       <tr>
-        <td><?php echo $row['id'];?></td>
+        <td><?=$row['id']?></td>
         <td><?php echo $row['f_name']."    ".$row['l_name'];?></td>
         <td><?php echo $row['email'];?></td>
         <td><?php echo $row['role_id'];?></td>
-        <th scope="col"><a class="btn btn-primary btn-sm" href="">Edit</a> <a class="btn btn-danger btn-sm" href="delete.php">Delete</a></th>
+        <th scope="col"><a class="btn btn-primary btn-sm" href="update.php?id=<?=$row['id']?>">Edit</a> <a class="btn btn-danger btn-sm" href="../app/delete.php?id=<?=$row['id']?>">Delete</a></th>
       </tr>
     <?php
     }
