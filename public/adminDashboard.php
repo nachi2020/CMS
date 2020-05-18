@@ -41,7 +41,7 @@ while($row = mysqli_fetch_array($result)){
         <td><?php echo $row['f_name']."    ".$row['l_name'];?></td>
         <td><?php echo $row['email'];?></td>
         <td><?php echo $row['role_id'];?></td>
-        <th scope="col"><button>Edit</button> <button>Delete</button></th>
+        <th scope="col"><button class="btn btn-primary">Edit</button> <button class="btn btn-danger">Delete</button></th>
       </tr>
     <?php
     }
