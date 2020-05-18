@@ -37,7 +37,7 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result)){
   ?>
       <tr>
-        <td><?php echo $row['user_id'];?></td>
+        <td><?php echo $row['id'];?></td>
         <td><?php echo $row['f_name']."    ".$row['l_name'];?></td>
         <td><?php echo $row['email'];?></td>
         <td><?php echo $row['role_id'];?></td>
