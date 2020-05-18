@@ -12,7 +12,7 @@
 <body>
 
   <div class="col-md-4 offset-md-4 login">
-    <form action="../app/register.php"  method="POST" autocomplete="off">
+    <form action="../app/createUser.php"  method="POST" autocomplete="off">
       <center><h1>ADD USER</h1></center>
 
   <div class="form-group">

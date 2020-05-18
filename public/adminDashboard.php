@@ -13,7 +13,7 @@
   <body>
 
 <div class="container">
-  <a class="btn btn-primary" href="">Add User</a>
+  <a class="btn btn-primary" href="adduser.php">Add User</a>
 </div>
 
  <div class="container">
@@ -41,7 +41,7 @@ while($row = mysqli_fetch_array($result)){
         <td><?php echo $row['f_name']."    ".$row['l_name'];?></td>
         <td><?php echo $row['email'];?></td>
         <td><?php echo $row['role_id'];?></td>
-        <th scope="col"><a class="btn btn-primary btn-sm" href="">Edit</a> <a class="btn btn-danger btn-sm" href="">Delete</a></th>
+        <th scope="col"><a class="btn btn-primary btn-sm" href="">Edit</a> <a class="btn btn-danger btn-sm" href="delete.php">Delete</a></th>
       </tr>
     <?php
     }
