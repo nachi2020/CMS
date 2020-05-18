@@ -35,6 +35,13 @@
   <input type="password" name="password" class="form-control" autocomplete="off"><br>
   </div>
 
+  <div>
+    <select name="role_id">
+      <option value="1">Admin</option>
+      <option value="2">User</option>
+    </select>
+  </div>
+
 <div class="container">
 <button type="submit" class="btn btn-primary">SIGN UP</button>
 <p>Are you already a user? <a href="userlogin.php">Login here</a></p>
