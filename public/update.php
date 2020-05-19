@@ -25,6 +25,8 @@ $users = mysqli_fetch_array($result);
     <form action="update.php"  method="POST" autocomplete="off">
       <center><h1>EDIT USER</h1></center>
 
+<input type="hidden" name="id">
+
   <div class="form-group">
     <label>Firstname:</label>
   <input type="text" name="firstname" class="form-control" autocomplete="off" value="<?=$users['f_name']?>"><br>
