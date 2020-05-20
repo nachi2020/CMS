@@ -5,7 +5,7 @@ include_once '../database/dbconnection.php';
 $id = $_GET['id'];
 $sql = "SELECT * from users where id = '$id' LIMIT 1"; 
 $result = mysqli_query($conn,$sql);
-$users = mysqli_fetch_array($result);
+$user = mysqli_fetch_array($result);
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +22,10 @@ $users = mysqli_fetch_array($result);
 <body>
 
   <div class="col-md-4 offset-md-4 login">
-    <form action="update.php"  method="POST" autocomplete="off">
+    <form action="../app/update.php"  method="POST" autocomplete="off">
       <center><h1>EDIT USER</h1></center>
 
-<input type="hidden" name="id">
+<input type="hidden" name="id" value="<?=$users['id']?>">
 
   <div class="form-group">
     <label>Firstname:</label>
