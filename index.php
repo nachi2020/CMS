@@ -1,3 +1,3 @@
 <?php
 
-header('location: public/loginAccount.php');
+header('location: public/');
