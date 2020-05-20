@@ -14,6 +14,7 @@ $result = mysqli_query($conn,$sql);
 
 if ($result) {
 	# code...
+	echo mysqli_error($conn);
 	header('location: ../public/adminDashboard.php');
 }
 

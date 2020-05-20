@@ -5,7 +5,7 @@ include_once '../database/dbconnection.php';
 $id = $_GET['id'];
 $sql = "SELECT * from users where id = '$id' LIMIT 1"; 
 $result = mysqli_query($conn,$sql);
-$user = mysqli_fetch_array($result);
+$users = mysqli_fetch_array($result);
 ?>
 
 <!DOCTYPE html>
