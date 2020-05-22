@@ -1,5 +1,11 @@
 
 <?php
+
+
+session_start();
+if(empty($_SESSION))
+  header("location: adminlogin.php");
+
 //conection
 include_once '../database/dbconnection.php';
 $id = $_GET['id'];

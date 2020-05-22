@@ -1,8 +1,12 @@
 body{
-	margin-top: 150px;
 	background: #eee;
 }
-
+.container{
+	margin-top: 50px;
+}
+.adduser{
+	margin-bottom: 20px;
+}
 .login{
 	border: gray 1px;
 	border-radius: 30px;
@@ -10,8 +14,4 @@ body{
 	padding: 40px;
 	color: black;
 	background: white;
-}
-
-.table-div{
-	margin-top: 100px;
 }
