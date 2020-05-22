@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(empty($_SESSION))
+if(!empty($_SESSION))
   header("location: adminlogin.php");
 ?>
 <!doctype html>
