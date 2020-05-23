@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(!empty($_SESSION))
+  header("location: adminDashboard.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

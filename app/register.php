@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once '../database/dbconnection.php';
 
 $first = $_POST['firstname'];
@@ -13,6 +13,9 @@ $result = mysqli_query($conn,$sql);
 
 if ($result) {
 	# code...
+	
+	
+
 	header('location: ../public/userlogin.php');
 }else{
 	header('location: ../public/register.php');
