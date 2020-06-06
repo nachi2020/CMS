@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!empty($_SESSION))
-  header("location: adminDashboard.php");
+  header("location: userhome.php");
 ?>
 <!doctype html>
 <html lang="en">
