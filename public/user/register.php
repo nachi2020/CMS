@@ -17,7 +17,7 @@ if(!empty($_SESSION))
 <body>
 
   <div class="col-md-4 offset-md-4 login">
-    <form action="../app/register.php"  method="POST" autocomplete="off">
+<form action="../../app/register.php"  method="POST" autocomplete="off">
       <center><h1>REGISTER</h1></center>
 
   <div class="form-group">
@@ -40,13 +40,11 @@ if(!empty($_SESSION))
   <input type="password" name="password" class="form-control" autocomplete="off"><br>
   </div>
 
-<div class="container">
-<button type="submit" class="btn btn-primary">SIGN UP</button>
-<p>Are you already a user? <a href="userlogin.php">Login here</a></p>
+  <div class="container">
+  <button type="submit" class="btn btn-primary">SIGN UP</button>
+  <p>Are you already a user? <a href="userlogin.php">Login here</a></p>
 
-</div>
-
-
+  </div>
 </form>
 </div>
 

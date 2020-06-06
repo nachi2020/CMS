@@ -1,11 +1,11 @@
 <?php
-session_start();
-if(!empty($_SESSION))
-  header("location: userhome.php");
+include 'helper/helper.php';
+Helper::isLogin();
 ?>
 <!doctype html>
 <html lang="en">
   <head>
+    <title>User Login</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,14 +25,14 @@ if(!empty($_SESSION))
     <label>Email:</label>
   <input type="text" name="email" class="form-control" autocomplete="off"><br>
   </div>
-  
+
   <div class="form-group">
   <label>Password:</label>
   <input type="password" name="password" class="form-control" autocomplete="off"><br>
   </div>
 
 <div class="container">
-<button type="submit" class="btn btn-primary">LOGIN</button> 
+<button type="submit" class="btn btn-primary">LOGIN</button>
 </div>
 
 

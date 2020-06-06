@@ -9,7 +9,7 @@ if(empty($_SESSION))
 //conection
 include_once '../database/dbconnection.php';
 $id = $_GET['id'];
-$sql = "SELECT * from users where id = '$id' LIMIT 1"; 
+$sql = "SELECT * from users where id = '$id' LIMIT 1";
 $result = mysqli_query($conn,$sql);
 $users = mysqli_fetch_array($result);
 ?>

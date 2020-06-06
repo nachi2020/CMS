@@ -25,14 +25,14 @@ if(!empty($_SESSION))
     <label>Email:</label>
   <input type="text" name="email" class="form-control" autocomplete="off"><br>
   </div>
-  
+
   <div class="form-group">
   <label>Password:</label>
   <input type="password" name="password" class="form-control" autocomplete="off"><br>
   </div>
 
 <div class="container">
-<button type="submit" class="btn btn-primary">LOGIN</button> 
+<button type="submit" class="btn btn-primary">LOGIN</button>
 </div>
 
 
