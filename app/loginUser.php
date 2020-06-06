@@ -13,6 +13,7 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result)==1) {
 $user = mysqli_fetch_array($result);
 $_SESSION['id'] = $user['id'];
+$_SESSION['role_id'] = $user['role_id'];
 $_SESSION['name'] = $user['f_name']." ".$user['l_name'];
 $_SESSION['email'] = $user['email'];
 
